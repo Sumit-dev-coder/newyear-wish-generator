@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+/* ===== SKY BLUE BACKGROUND ===== */
+.luxury-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cfefff, #eaf8ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== MAIN CARD ===== */
+.glass {
+    max-width: 650px;
+    width: 100%;
+    padding: 55px 50px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 30px 90px rgba(0,0,0,0.18);
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== HEADINGS ===== */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 35px;
+}
+
+/* ===== FORM ===== */
+.field {
+    margin-bottom: 18px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #cfdce6;
+    font-size: 15px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(90deg, #00b4ff, #007aff);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0,122,255,0.45);
+}
+
+/* ===== FIREWORK CANVAS ===== */
+#fireworks {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}

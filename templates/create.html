@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Year Wish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="luxury-bg">
+
+<div class="glass">
+    <h1 class="title">✨ Create Your New Year Wish ✨</h1>
+    <p class="subtitle">Fill details and generate your wish</p>
+
+    <div class="field">
+        <input id="name" placeholder="Person Name" required>
+    </div>
+
+    <div class="field">
+        <select id="relation">
+            <option value="friend">Friend</option>
+            <option value="family">Family</option>
+            <option value="partner">Partner</option>
+            <option value="colleague">Colleague</option>
+            <option value="boss">Boss</option>
+            <option value="teacher">Teacher</option>
+            <option value="client">Client</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <select id="profession">
+            <option value="student">Student</option>
+            <option value="software engineer">Software Engineer</option>
+            <option value="devops engineer">DevOps Engineer</option>
+            <option value="cloud engineer">Cloud Engineer</option>
+            <option value="linux administrator">Linux Administrator</option>
+            <option value="data analyst">Data Analyst</option>
+            <option value="business owner">Business Owner</option>
+            <option value="freelancer">Freelancer</option>
+            <option value="manager">Manager</option>
+            <option value="doctor">Doctor</option>
+            <option value="entrepreneur">Entrepreneur</option>
+            <option value="trader">Trader</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <select id="tone">
+            <option value="motivational">Motivational</option>
+            <option value="emotional">Emotional</option>
+            <option value="fun">Fun</option>
+            <option value="professional">Professional</option>
+        </select>
+    </div>
+
+    <button class="btn" onclick="go()">Generate Wish</button>
+</div>
+
+<script>
+function go() {
+    const name = document.getElementById("name").value || "Someone";
+    const relation = document.getElementById("relation").value;
+    const profession = document.getElementById("profession").value;
+    const tone = document.getElementById("tone").value;
+
+    window.location.href =
+        `/wish/${encodeURIComponent(name)}/${encodeURIComponent(relation)}/${encodeURIComponent(profession)}/${encodeURIComponent(tone)}`;
+}
+</script>
+
+<script src="/static/js/fireworks.js"></script>
+</body>
+</html>

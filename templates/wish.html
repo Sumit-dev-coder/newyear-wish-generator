@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy New Year</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="luxury-bg">
+
+<div class="glass">
+    <h1 class="title">🎉 Happy New Year 🎉</h1>
+
+    <p class="subtitle" id="wishText">{{ message }}</p>
+
+    <!-- Hidden input for fallback copy -->
+    <input type="text" id="shareLink" value="{{ request.url }}" readonly
+           style="position:absolute; left:-9999px;">
+
+    <button class="btn" onclick="copyLink()" id="copyBtn">
+        Copy Share Link
+    </button>
+
+    <a class="btn" style="margin-top:15px"
+       target="_blank"
+       href="https://wa.me/?text={{ message | urlencode }}">
+        Share on WhatsApp
+    </a>
+</div>
+
+<script>
+function copyLink() {
+    const link = document.getElementById("shareLink");
+
+    link.select();
+    link.setSelectionRange(0, 99999); // Mobile support
+
+    try {
+        document.execCommand("copy");
+        const btn = document.getElementById("copyBtn");
+        btn.innerText = "Link Copied ✔";
+        setTimeout(() => btn.innerText = "Copy Share Link", 2000);
+    } catch (err) {
+        alert("Copy failed. Please copy manually.");
+    }
+}
+</script>
+
+<script src="/static/js/fireworks.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+venv/
+env/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Cloudflare / secrets
+*.pem
+*.key
+config.yml
