@@ -28,3 +28,5 @@ Built as a hands-on project to practice:
 
 ---
 ⭐ Feel free to explore or fork this project.
+
+Auther: Sumit Kushwaha
